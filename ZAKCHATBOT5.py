@@ -14,7 +14,6 @@ import logging
 from dataclasses import dataclass, field
 import openai
 import pandas as pd
-from App import sms_reply
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
