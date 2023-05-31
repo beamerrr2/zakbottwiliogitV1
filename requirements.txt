@@ -28,3 +28,4 @@ numpy==1.21.6
 pinecone-client==2.1.0
 pandas==1.3.5
 scikit-learn==1.0.2
+git+https://github.com/openai/openai-python.git@main
