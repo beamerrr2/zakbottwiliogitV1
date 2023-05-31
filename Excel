@@ -1,0 +1,15 @@
+import pandas as pd
+
+# Load spreadsheet
+excel_file = "C:\\Users\\itsbe\\Downloads\\Digitalmasterminds Leads\\new_Merged file.xlsx"
+
+# Load a sheet into a DataFrame by name
+df = pd.read_excel(excel_file, engine='openpyxl')
+
+# Select all the data in column 'N'
+column_N_data = df['D']
+
+# Write the data to a .txt file
+with open('Mergedleads.txt', 'w') as f:
+    for item in column_N_data:
+        f.write("%s\n" % item)
