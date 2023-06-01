@@ -9,7 +9,7 @@ import datetime
 import pinecone
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
-from openai.embeddings_utils import cosine_similarity, get_embedding
+from openai.embeddings_utils import cosine_similarit
 import logging
 from dataclasses import dataclass, field
 import openai
