@@ -18,7 +18,11 @@ import pandas as pd
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
-
+def get_embedding(content, engine='text-embedding-ada-002'):
+    content = content.encode(encoding='ASCII',errors='ignore').decode()  # fix any UNICODE errors
+    response = openai.Embedding.create(input=content,engine=engine)
+    vector = response['data'][0]['embedding']  # this is a normal list      
+    return vector
 @dataclass
 class ChatbotConfig:
     documents_file: str = "\\Users\\itsbe\\OneDrive\\Desktop\\Z.A.K Mastermind\\LongtermChatExternalSources\\CustomKndb2.txt"
